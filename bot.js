@@ -219,7 +219,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + 'clear')) {
+    if (message.content.startsWith('clear')) {
       if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`You Don't Have [*MANAGE_MESSAGES*] Permission `).catch(console.error);
   message.delete()
   if(!message.channel.guild) return;
@@ -300,7 +300,7 @@ const adminprefix = "*";
 const ownersbot = ['428902593255702548']; //ايديات مسموح لها
 
 client.on('message', message => {
-if(message.content === adminprefix + "restart") {
+if(message.content === "restart") {
       if (!ownersbot.includes(message.author.id)) return;
           message.channel.send(`⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**`);
         console.log(`⚠️ جاري اعادة تشغيل البوت... ⚠️`);
