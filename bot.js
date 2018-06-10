@@ -29,6 +29,7 @@ member.addRole(member.guild.roles.find('name', 'not active'));
 
 ///////////////////codes
 
+
 client.on('message', message => {
     if(!message.channel.guild) return;
        if(message.content.startsWith('Code')) {
@@ -50,20 +51,16 @@ client.on('message', message => {
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "Code"));
                                    message.member.removeRole(message.guild.roles.find("name", "not active"));
-                                     .setDescription('**__:white_check_mark: لقد تم تفعيلك في السيرفر__**')
-                                      .addField('تم تفعيل العضو :', "<@" + message.author.id + ">")
-
-
-
-                    .setImage(`${message.author.avatarURL}`)
-
-
-  message.delete("..");
+                                   msg.delete();
+                                   message.channel.send(`**تم تفعيلك استمتع.**`).then(m => m.delete(1000));
 
                                    })
                                    })
                                    }
                                    });
+
+
+
 
 /*
 
