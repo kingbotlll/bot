@@ -132,23 +132,16 @@ client.on('message', function(message) {
     if(message.content.startsWith('Shop')) {
         let guild = message.mentions.members.first();
                                   let modlog = client.channels.find('name', 'active');
-
-
                           let ZmA = new Discord.RichEmbed()
   .setColor('3fcf24')
                   .setDescription('**__:white_check_mark: لقد تم تفعيلك في السيرفر__**')
                                       .addField('تم تفعيل العضو :', "<@" + message.author.id + ">")
-
-
-
                     .setImage(`${message.author.avatarURL}`)
-
-
   message.delete("..");
-
-        message.member.addRole(message.guild.roles.find('name', 'Shop'));
+      
+         message.member.addRole(message.guild.roles.find('name', 'Shop'));
                     message.channel.send({embed:ZmA});
-    }
+}
 });
 
 
@@ -206,24 +199,16 @@ client.on('message', function(message) {
     if(message.content.startsWith('Games')) {
         let guild = message.mentions.members.first();
                                   let modlog = client.channels.find('name', 'active');
-
-
                           let ZmA = new Discord.RichEmbed()
   .setColor('3fcf24')
                   .setDescription('**__:white_check_mark: لقد تم تفعيلك في السيرفر__**')
                                       .addField('تم تفعيل العضو :', "<@" + message.author.id + ">")
-
-
-
                     .setImage(`${message.author.avatarURL}`)
-
-
   message.delete("..");
-
-
-        message.member.addRole(message.guild.roles.find('name', 'Games'));
+      
+         message.member.addRole(message.guild.roles.find('name', 'Games'));
                     message.channel.send({embed:ZmA});
-    }
+}
 });
 
 
@@ -272,31 +257,21 @@ client.on('message', message => {
 */
 
 
-
 client.on('message', function(message) {
     if(message.content.startsWith('Swalf')) {
         let guild = message.mentions.members.first();
                                   let modlog = client.channels.find('name', 'active');
-
-
                           let ZmA = new Discord.RichEmbed()
   .setColor('3fcf24')
                   .setDescription('**__:white_check_mark: لقد تم تفعيلك في السيرفر__**')
                                       .addField('تم تفعيل العضو :', "<@" + message.author.id + ">")
-
-
-
                     .setImage(`${message.author.avatarURL}`)
-
-
   message.delete("..");
-
-
-        message.member.addRole(message.guild.roles.find('name', 'Swalf'));
+      
+         message.member.addRole(message.guild.roles.find('name', 'Swalf'));
                     message.channel.send({embed:ZmA});
-    }
+}
 });
-
 
 
 
