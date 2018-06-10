@@ -28,7 +28,7 @@ member.addRole(member.guild.roles.find('name', 'not active'));
 
 
 ///////////////////codes
-
+/*
 client.on('message', message => {
     if(!message.channel.guild) return;
        if(message.content.startsWith('Code')) {
@@ -58,13 +58,49 @@ client.on('message', message => {
                                    }
                                    });
 
+*/
+
+
+
+
+
+
+client.on('message', function(message) {
+    if(message.content.startsWith('Code')) {
+        let guild = message.mentions.members.first();
+                                  let modlog = client.channels.find('name', 'active');
+
+
+                          let ZmA = new Discord.RichEmbed()
+  .setColor('3fcf24')
+                  .setDescription('**__:white_check_mark: لقد تم تفعيلك في السيرفر__**')
+                                      .addField('تم تفعيل العضو :', "<@" + message.author.id + ">")
+
+
+
+                    .setImage(`${message.author.avatarURL}`)
+
+
+  message.delete("..");
+
+
+        message.member.addRole(message.guild.roles.find('name', 'Code'));
+                    message.channel.send({embed:ZmA});
+    }
+});
+
+
+
+
+
+
 
 
 
 
 //////////shop
 
-
+/*
 client.on('message', message => {
     if(!message.channel.guild) return;
        if(message.content.startsWith('Shop')) {
@@ -94,8 +130,34 @@ client.on('message', message => {
                                    }
                                    });
 
+*/
 
 
+
+
+client.on('message', function(message) {
+    if(message.content.startsWith('Shop')) {
+        let guild = message.mentions.members.first();
+                                  let modlog = client.channels.find('name', 'active');
+
+
+                          let ZmA = new Discord.RichEmbed()
+  .setColor('3fcf24')
+                  .setDescription('**__:white_check_mark: لقد تم تفعيلك في السيرفر__**')
+                                      .addField('تم تفعيل العضو :', "<@" + message.author.id + ">")
+
+
+
+                    .setImage(`${message.author.avatarURL}`)
+
+
+  message.delete("..");
+
+
+        message.member.addRole(message.guild.roles.find('name', 'Shop'));
+                    message.channel.send({embed:ZmA});
+    }
+});
 
 
 
@@ -105,7 +167,7 @@ client.on('message', message => {
 ////////////////////games
 
 
-
+/*
 
 
 client.on('message', message => {
@@ -140,6 +202,37 @@ client.on('message', message => {
 
 
 
+*/
+
+
+
+
+
+
+
+client.on('message', function(message) {
+    if(message.content.startsWith('Games')) {
+        let guild = message.mentions.members.first();
+                                  let modlog = client.channels.find('name', 'active');
+
+
+                          let ZmA = new Discord.RichEmbed()
+  .setColor('3fcf24')
+                  .setDescription('**__:white_check_mark: لقد تم تفعيلك في السيرفر__**')
+                                      .addField('تم تفعيل العضو :', "<@" + message.author.id + ">")
+
+
+
+                    .setImage(`${message.author.avatarURL}`)
+
+
+  message.delete("..");
+
+
+        message.member.addRole(message.guild.roles.find('name', 'Games'));
+                    message.channel.send({embed:ZmA});
+    }
+});
 
 
 ///////////////////////////////////swlaf
@@ -152,7 +245,7 @@ client.on('message', message => {
 
 
 
-
+/*
 
 client.on('message', message => {
     if(!message.channel.guild) return;
@@ -182,6 +275,36 @@ client.on('message', message => {
                                    })
                                    }
                                    });
+
+
+*/
+
+
+
+client.on('message', function(message) {
+    if(message.content.startsWith('Swalf')) {
+        let guild = message.mentions.members.first();
+                                  let modlog = client.channels.find('name', 'active');
+
+
+                          let ZmA = new Discord.RichEmbed()
+  .setColor('3fcf24')
+                  .setDescription('**__:white_check_mark: لقد تم تفعيلك في السيرفر__**')
+                                      .addField('تم تفعيل العضو :', "<@" + message.author.id + ">")
+
+
+
+                    .setImage(`${message.author.avatarURL}`)
+
+
+  message.delete("..");
+
+
+        message.member.addRole(message.guild.roles.find('name', 'Swalf'));
+                    message.channel.send({embed:ZmA});
+    }
+});
+
 
 
 
