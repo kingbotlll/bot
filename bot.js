@@ -84,13 +84,13 @@ client.on('message', function(message) {
   message.delete("..");
 
 
-        message.member.addRole(message.guild.roles.find('name', 'Code'));
+      
+         message.member.addRole(Message.guild.roles.fin('name', 'Code'));
                     message.channel.send({embed:ZmA});
-    }
+
+
+}
 });
-
-
-
 
 
 
@@ -152,7 +152,6 @@ client.on('message', function(message) {
 
 
   message.delete("..");
-
 
         message.member.addRole(message.guild.roles.find('name', 'Shop'));
                     message.channel.send({embed:ZmA});
