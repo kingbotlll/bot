@@ -28,7 +28,7 @@ member.addRole(member.guild.roles.find('name', 'not active'));
 
 
 ///////////////////codes
-
+/*
 
 client.on('message', message => {
     if(!message.channel.guild) return;
@@ -62,7 +62,7 @@ client.on('message', message => {
 
 
 
-/*
+*/
 
 
 
@@ -73,32 +73,21 @@ client.on('message', function(message) {
     if(message.content.startsWith('Code')) {
         let guild = message.mentions.members.first();
                                   let modlog = client.channels.find('name', 'active');
-
-
                           let ZmA = new Discord.RichEmbed()
   .setColor('3fcf24')
                   .setDescription('**__:white_check_mark: لقد تم تفعيلك في السيرفر__**')
                                       .addField('تم تفعيل العضو :', "<@" + message.author.id + ">")
-
-
-
                     .setImage(`${message.author.avatarURL}`)
-
-
   message.delete("..");
-
-
       
-         message.member.addRole(Message.guild.roles.fin('name', 'Code'));
+         message.member.addRole(message.guild.roles.find('name', 'Code'));
                     message.channel.send({embed:ZmA});
-
-
 }
 });
 
 
 
-*/
+
 
 
 
