@@ -414,9 +414,9 @@ client.on('message', function(message) {
     if(message.content.startsWith("report")) {
         let messageArgs = message.content.split(" ").slice(1).join(" ");
         let messageReason = message.content.split(" ").slice(2).join(" ");
-        if(!messageReason) return message.reply("**# Specify a reason!**");
+        if(!messageReason) return message.reply("**report @mention reason! **");
     let mUser = message.mentions.users.first();
-    if(!mUser) return message.channel.send("Couldn't find user.");
+    if(!mUser) return message.channel.send("لم اجد الشخص.");
     let Rembed = new Discord.RichEmbed()
     .setTitle("`New Report!`")
     .setThumbnail(message.author.avatarURL)
@@ -427,7 +427,7 @@ client.on('message', function(message) {
     .addField("**# - Time:**",message.createdAt,true)
     .setFooter("لو ان الابلاغ فيه مزح راح يتعرض صاحب الابلاغ لقوبات")
 message.channel.send(Rembed)
-message.channel.send("__Are you sure you want to send this to the Server owner??__").then(msg => {
+message.channel.send("__هل انت متاكد هذه رساله سوف تنرسل الى اونر سيرفر__").then(msg => {
     msg.react("✅")
     msg.react("❌")
 .then(() => msg.react('❌'))
@@ -439,10 +439,10 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
     hook.send(Rembed)
-    message.reply("**# - Done! 🎇**");
+    message.reply("**# - تم! 🎇**");
 })
 reaction2.on("collect", r => {
-    message.reply("**# - Canceled!**");
+    message.reply("**# - اغلاق!**");
 })
 })
 }
